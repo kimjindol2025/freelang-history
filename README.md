@@ -4,6 +4,8 @@
 
 **AFJ를 쓰는 이유는 단 하나, AI와 가장 가깝기 때문입니다.** 이 코너의 점수는 "**인간을 얼마나 배제했느냐**"입니다. 반대쪽 끝은 인간용 언어입니다. 0%는 완전히 인간을 위한 언어이고, 숫자가 클수록 인간을 위한 배려를 덜어 내고 AI 쪽으로 간 언어입니다. 만든 사람이 매긴 점수는 FreeLang v1 0%(인간용 100%), FreeLang v2 10%(인간용 90%), FreeLang v9 70%(인간용 30%), AFJ Language(FreeLang v11) 80%(인간용 20%)입니다. AFJ 말고 다른 언어들은 실패한 것이 아니라 **발전을 멈춰 둔 상태**입니다. 아래 표의 "AI용 : 인간용" 칸은 만든 사람의 평가이고, 아직 매기지 않은 언어는 "미정"으로 두었습니다.
 
+- 각 언어를 이 축으로 자세히 따져 본 글: [인간 배제 분석](analysis/인간-배제-분석.md) (판단 기준 9가지, 언어별 근거, 아직 매기지 않은 언어의 조사자 추정 포함)
+
 - 조사일: 2026-09-25. 날짜·시각은 모두 한국 시간(KST).
 - **본 저장소는 사용자의 자체 Forgejo 서버 [fg.dclub.kr](https://fg.dclub.kr)(계정 `kim`, 저장소 800개 중 792개 비공개)** 이고, GitHub 계정 kimjindol2025는 **백업**입니다. 이번 판은 본 저장소를 기준으로 다시 조사했습니다. 링크는 비공개 저장소라 로그인해야 열립니다.
 - 백업이 본 저장소와 다른 경우가 많습니다. FreeLang v3·v8·v10·v12는 **백업이 빈 저장소**이고 코드는 본 저장소에만 있습니다. v2·v4·v5·v6은 백업이 3월에 멈춰 있고 본 저장소에 커밋이 수십~백여 개 더 있습니다(백업에만 있는 커밋도 조금 있어 기록이 갈라져 있음). AFJ(v11)는 본 저장소가 9/20, 백업이 9/17입니다.
@@ -21,7 +23,7 @@
 | FreeLang v10 | 미정 | [freelang-v10](https://fg.dclub.kr/kim/freelang-v10) (+ freelang-v9 안 커밋 12개) | freelang-v10 **빈 저장소** | 2026-04-15 ~ 2026-04-21 | FreeLang(.fl) 8,386줄 + JS 2,416줄 | 괄호 목록형. 백엔드·화면·운영을 한 언어로 만드는 풀스택 업무 앱 | 실행 실패(불러 쓰는 v9 해석기의 절대 경로 문제) | [v10.md](versions/v10.md) |
 | FreeLang v11 | 80 : 20 (= AFJ) | = AFJ Language의 다른 이름. 부속 저장소 [freelang-v11-fx](https://fg.dclub.kr/kim/freelang-v11-fx) 등 | 일부 부속만 백업 | — | — | AFJ Language 문서 참고 | — | [v11.md](versions/v11.md) |
 | FreeLang v12 | 미정 | [freelang-v12](https://fg.dclub.kr/kim/freelang-v12), [v12-alpha](https://fg.dclub.kr/kim/v12-alpha) | 두 곳 모두 **빈 저장소** | 2026-05-01 ~ 2026-05-17 | FreeLang(.fl) 34개 + JS 실행기 | `[FUNC]` 블록 문법, 패키지(KPM) 엔진 | freelang-v12 **실행 확인**(49, 5 출력). v12-alpha는 실행 실패 | [v12.md](versions/v12.md) |
-| FreeLang v2 | 10 : 90 | [freelang-v2](https://fg.dclub.kr/kim/freelang-v2), [v2-freelang-ai](https://fg.dclub.kr/kim/v2-freelang-ai), [FreeLang_v2_1](https://fg.dclub.kr/kim/FreeLang_v2_1) 등 | 3/12~13에서 멈춤, 본 저장소에만 117·173개. FreeLang_v2_1은 빈 저장소 | 2026-02-15 ~ **2026-04-15** | TypeScript (40만 줄대), v2_1은 C | 중괄호형. "자기 자신의 소스를 컴파일 및 린트할 수 있는 제로 외부 의존성 AI 기반 프로그래밍 언어" | **실행 확인**(백업판, 예제 정상) | [v2.md](versions/v2.md) |
+| FreeLang v2 | 10 : 90 | [freelang-v2](https://fg.dclub.kr/kim/freelang-v2), [v2-freelang-ai](https://fg.dclub.kr/kim/v2-freelang-ai), [FreeLang_v2_1](https://fg.dclub.kr/kim/FreeLang_v2_1) 등 v2 이름 저장소 19곳 | 3/12~13에서 멈춤, 백업에만 있는 커밋도 185개. FreeLang_v2_1은 빈 저장소 | 2026-02-15 ~ **2026-04-15**, 커밋 **약 1,180개**(두 서버 합, 중복 제외) | TypeScript (40만 줄대), v2_1은 C | 중괄호형. "자기 자신의 소스를 컴파일 및 린트할 수 있는 제로 외부 의존성 AI 기반 프로그래밍 언어" | **실행 확인**(백업판, 예제 정상) | [v2.md](versions/v2.md) |
 | FreeLang v3 | 미정 | [v3-freelang-ai](https://fg.dclub.kr/kim/v3-freelang-ai) | **빈 저장소** | 2026-02-18 ~ 2026-03-26 | TypeScript 약 5만 줄 | 파이썬식 들여쓰기 + 대문자 명령어(`INT x = 10`, `IF x > 5:`) | 실행은 되나 결과 "undefined". 시험 4개 중 3개 통과 | [v3.md](versions/v3.md) |
 | FreeLang v4 | 미정 | [freelang-v4](https://fg.dclub.kr/kim/freelang-v4) 등 | 3/26에서 멈춤, 본 저장소에만 81개. freelang-langv4는 본 저장소의 4/5 무렵 사본으로 보임 | 2026-02-19 ~ **2026-04-10** | TypeScript 약 2만 줄 + .fl 3만 7천 줄 | 중괄호형 정적 타입 + 바이트코드 가상머신 | 본 저장소판 테스트 266 통과/11 실패, 예제 1개 실패 | [v4.md](versions/v4.md) |
 | FreeLang v5 | 미정 | [freelang-v5-ai](https://fg.dclub.kr/kim/freelang-v5-ai) | 3/4에서 멈춤, 본 저장소에만 4개 | 2026-03-03 ~ 2026-03-26 | TypeScript 약 8천 줄 | 의도 → 여러 언어 코드 생성기. "Human 10% + AI 90%" | 백업판은 '데모 모드'로 빈 함수만 생성 | [v5.md](versions/v5.md) |
