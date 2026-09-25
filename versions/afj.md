@@ -4,15 +4,19 @@
 
 ## 1. 어디에 있나
 
-| 위치 | 만든 때 (KST) | 마지막 커밋 | 비고 |
-|---|---|---|---|
-| kim27 `/home/kim/kim/platform/freelang-afj` | 첫 커밋 2026-04-03 20:08 | 2026-08-28 23:41 (master 가지) / 모든 가지 중 최신 2026-08-30 21:43 | 커밋 1,763개(master). 원격은 자체 Git 서버 Forgejo `kim/freelang-afj`. 커밋 안 된 변경 114건 |
-| GitHub [freelang-v11](https://github.com/kimjindol2025/freelang-v11) | 저장소 생성 2026-04-19 23:48 | 2026-09-17 07:55 (마지막 푸시 2026-09-20 12:02) | 공개, 약 154MB. `package.json` 판 `11.7.11` |
-| GitHub [freelang-v11-1](https://github.com/kimjindol2025/freelang-v11-1) | 2026-06-19 19:40 | 푸시 2026-06-20 21:01 | 약 149MB의 사본으로 보임(열어 보지 않음) |
-| GitHub [freelang-afj](https://github.com/kimjindol2025/freelang-afj) | 2026-08-19 01:45 | — | **빈 저장소** |
+| 구분 | 위치 | 첫 커밋 (KST) | 마지막 커밋 | 커밋 수 | 비고 |
+|---|---|---|---|---|---|
+| **본 저장소** | [fg.dclub.kr/kim/freelang-afj](https://fg.dclub.kr/kim/freelang-afj) | 2026-04-03 20:08 | **2026-08-30 02:25** (master, "feat: add isolated SSH PTY runtime") | 1,769 (master) | 약 167MB, 가지 5개 |
+| **본 저장소** | [fg.dclub.kr/kim/freelang-v11](https://fg.dclub.kr/kim/freelang-v11) | 2026-04-03 20:08 | **2026-09-20 22:11** (master, "feat(cli): add safe parenthesis fixer") | 1,692 (master) | 약 158MB, 가지 28개. `package.json` 판 11.7.11(GitHub 백업판에서 확인) |
+| 본 저장소 | [fg.dclub.kr/kim/freelang-v11-1](https://fg.dclub.kr/kim/freelang-v11-1) | 2026-04-03 20:08 | 2026-06-08 03:14 | 1,629 | 사본으로 보임 |
+| 본 저장소 | [fg.dclub.kr/kim/freelang-native](https://fg.dclub.kr/kim/freelang-native) | 2026-04-03 20:08 | 2026-05-25 11:57 | 1,479 | 약 146MB. 이름에 번호가 없지만 첫 커밋이 같음 |
+| kim27 작업본 | `/home/kim/kim/platform/freelang-afj` (원격: 본 저장소 `kim/freelang-afj`) | 2026-04-03 20:08 | 로컬 master 2026-08-28 23:41 | 1,763 | 로컬 master는 본 저장소 master(8/30)를 아직 받지 않은 상태. 커밋 안 된 변경 114건 |
+| GitHub 백업 | [freelang-v11](https://github.com/kimjindol2025/freelang-v11) | — | 2026-09-17 07:55 | — | 공개. 이 커밋은 본 저장소 `freelang-v11`에 있고, 본 저장소에는 그 뒤 9/20 커밋까지 있음 → **백업이 늦음** |
+| GitHub 백업 | [freelang-afj](https://github.com/kimjindol2025/freelang-afj) | — | — | 0 | **빈 저장소** |
 
-- 사실 관찰: GitHub `freelang-v11`의 마지막 커밋(0235180, 2026-09-17 07:55 "feat: add AI-friendly JSON diagnostics and CLI docs")은 kim27 `freelang-afj`에 **없습니다**. 두 사본의 최신 상태가 서로 다릅니다.
-- 함께 쓰는 실행 도구(같은 생태계, 별도 저장소): C로 만든 네이티브 실행기 [freelang-v11-fx](https://github.com/kimjindol2025/freelang-v11-fx)(kim27 `platform/freelang-v11-fx`, C 30개/8,888줄 + .fl 46개/9,591줄, 마지막 커밋 2026-09-24 09:34), [freelang-v11-fx2](https://github.com/kimjindol2025/freelang-v11-fx2)("AFJ Runtime", C, GitHub 생성 2026-07-06, 푸시 2026-09-20). 그 밖에 freelang-front(화면), AFL-Core-2(실행 계약), afl-db(저장소)가 README에 "관련 프로젝트"로 적혀 있습니다.
+- 사실 관찰: 본 저장소의 `freelang-afj`와 `freelang-v11`은 **첫 커밋이 같지만 최신 커밋이 서로 다릅니다**. `freelang-v11`의 9/20 커밋은 `freelang-afj`에 없습니다. 두 저장소가 따로 계속 쓰이고 있습니다(어느 쪽이 정본인지는 문서로 **확인 안 됨**. `freelang-afj` README는 자기 이름을 "freelang-afj (AFJ Language)"라고 적음).
+- fg.dclub.kr의 저장소 "만든 날"은 모두 2026-08-21 무렵(서버 이전일로 보임)이라 커밋 날짜를 적었습니다.
+- 함께 쓰는 실행 도구(같은 생태계, 별도 저장소): C 네이티브 실행기 [freelang-v11-fx](https://fg.dclub.kr/kim/freelang-v11-fx)(kim27 로컬 마지막 커밋 2026-09-24), [freelang-v11-fx2](https://fg.dclub.kr/kim/freelang-v11-fx2)("AFJ Runtime"), [freelang-v11-fx2-aarch64-verify](https://fg.dclub.kr/kim/freelang-v11-fx2-aarch64-verify)(본 저장소에만 있음). 그 밖에 freelang-front, AFL-Core-2, afl-db.
 
 ## 2. 무엇으로 만들었나 / 규모 (kim27 `freelang-afj` 기준)
 
@@ -48,15 +52,15 @@
 
 ## 4. 상태
 
-- 이번 조사에서 GitHub `freelang-v11`을 조사용 상자에 얕게 복제해 **추가 설치 없이** `node bootstrap.js run examples/closure.fl` 실행 → `10, 8, true, false, 7` **정상 출력**. 직접 쓴 `(defn sq [x] (* x x)) (println (sq 7))` → **49**.
+- 이번 조사에서 GitHub 백업 `freelang-v11`(9/17 판)을 조사용 컴퓨터에 얕게 복제해 **추가 설치 없이** `node bootstrap.js run examples/closure.fl` 실행 → `10, 8, true, false, 7` **정상 출력**. 직접 쓴 `(defn sq [x] (* x x)) (println (sq 7))` → **49**.
 - 전체 테스트는 돌리지 않았습니다. 저장소 문서의 주장: "최종 검증: 2026-09-17 (좁은 범위 100/100 통과: parser·interpreter·core·lexer / 전체 스위트는 재측정 필요)". `reports/latest.md`: "실행 런타임 표기(`v11.1.1-dev`) 미정렬은 잔여".
-- 활동: 이 목록 중 **유일하게 지금도 움직이는 언어**. kim27 기준 커밋 안 된 변경 114건, GitHub 푸시 2026-09-20, C 실행기 커밋 2026-09-24.
+- 활동: 이 목록 중 **유일하게 지금도 움직이는 언어**. 본 저장소 `freelang-v11` 커밋 2026-09-20, kim27 작업본 커밋 안 된 변경 114건, C 실행기 커밋 2026-09-24.
 
 ## 5. 다른 FreeLang 이름 언어와 구별되는 점
 
 - 언어 자신(.fl)으로 쓴 코드가 7만 줄 가까이 되고, 규칙으로 "새 기능은 이 언어로"를 못 박아 둔 점.
 - C 네이티브 실행기(fx/fx2), 화면 계층, 데이터 저장소, 실제 서비스(VPN·인증·부하분산기 실험 등)까지 **이 언어로 만든 주변 프로젝트가 있는 유일한 경우**.
-- 사실 관찰: kim27 `freelang-afj`의 첫 커밋은 GitHub `freelang-v9`의 첫 커밋과 **같은 커밋**(f2ece2176a, 2026-04-03 20:08, "FreeLang v9: AI-Exclusive Programming Language - Complete Implementation")입니다. 이 저장소 안에서 "v11"을 처음 쓴 커밋은 2026-04-16 16:26 "chore: v11 Phase 1~5 자동 완성 … (v11.0.0)"입니다.
+- 사실 관찰: `freelang-afj`·`freelang-v11`의 첫 커밋은 `freelang-v9`의 첫 커밋과 **같은 커밋**(f2ece2176a, 2026-04-03 20:08, "FreeLang v9: AI-Exclusive Programming Language - Complete Implementation")입니다. 이 저장소 안에서 "v11"을 처음 쓴 커밋은 2026-04-16 16:26 "chore: v11 Phase 1~5 자동 완성 … (v11.0.0)"입니다.
 
 ## 문서에 적힌 주장 (조사자 해석 아님)
 
